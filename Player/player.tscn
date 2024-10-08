@@ -6,7 +6,7 @@
 [ext_resource type="AudioStream" uid="uid://bhuaj3d3ksoo1" path="res://Assets/Audio/SFX - Main engine thrust.ogg" id="4_kx7ju"]
 [ext_resource type="PackedScene" uid="uid://ux6ivcx1ovdp" path="res://Particles/booster_particles.tscn" id="5_t2xsa"]
 [ext_resource type="PackedScene" uid="uid://dcecb8hw7dbrv" path="res://Particles/explosion_particles.tscn" id="6_sm3vb"]
-[ext_resource type="PackedScene" path="res://Particles/success_particles.tscn" id="7_fiowk"]
+[ext_resource type="PackedScene" uid="uid://jfwajmrh6ca7" path="res://Particles/success_particles.tscn" id="7_fiowk"]
 [ext_resource type="Material" uid="uid://c2l8v3ekriaw8" path="res://ShipRedMaterial.tres" id="8_8q384"]
 
 [sub_resource type="CylinderMesh" id="CylinderMesh_tvgq1"]

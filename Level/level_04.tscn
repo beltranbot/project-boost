@@ -3,6 +3,7 @@
 [ext_resource type="Script" path="res://Level/landing_pad.gd" id="1_xpful"]
 [ext_resource type="PackedScene" uid="uid://4j2sf4jgjvi3" path="res://Player/player.tscn" id="2_flx3k"]
 [ext_resource type="PackedScene" uid="uid://lj3gom0563nr" path="res://moving_hazard.tscn" id="3_eptm4"]
+[ext_resource type="PackedScene" uid="uid://ckvuw0mf4siw0" path="res://Background.tscn" id="4_u3pks"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_ljjq0"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -16,9 +17,6 @@ background_mode = 2
 sky = SubResource("Sky_npwtg")
 tonemap_mode = 2
 glow_enabled = true
-
-[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1nan4"]
-albedo_color = Color(0.4, 0.273067, 0.176, 1)
 
 [sub_resource type="StandardMaterial3D" id="StandardMaterial3D_cxi5p"]
 albedo_color = Color(0.337255, 0.662745, 0.788235, 1)
@@ -35,12 +33,6 @@ environment = SubResource("Environment_28jf2")
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0, 0.5, 0.866025, -0.5, 0.75, -0.433013, 0, 0, 0)
 shadow_enabled = true
 
-[node name="Floor" type="CSGBox3D" parent="." groups=["Hazard"]]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -4, 0)
-use_collision = true
-size = Vector3(30, 8, 5)
-material = SubResource("StandardMaterial3D_1nan4")
-
 [node name="LaunchPad" type="CSGBox3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 0.2, 0)
 use_collision = true
@@ -56,9 +48,11 @@ script = ExtResource("1_xpful")
 file_path = "res://Level/level.tscn"
 
 [node name="Camera3D" type="Camera3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, 0, 3.902, 7.485)
+transform = Transform3D(1, 0, 0, 0, 0.978148, 0.207912, 0, -0.207912, 0.978148, 0, 6, 12)
 
 [node name="Player" parent="." instance=ExtResource("2_flx3k")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.5, 1.44819, 0)
 
 [node name="MovingHazard" parent="." instance=ExtResource("3_eptm4")]
+
+[node name="Floor" parent="." instance=ExtResource("4_u3pks")]
